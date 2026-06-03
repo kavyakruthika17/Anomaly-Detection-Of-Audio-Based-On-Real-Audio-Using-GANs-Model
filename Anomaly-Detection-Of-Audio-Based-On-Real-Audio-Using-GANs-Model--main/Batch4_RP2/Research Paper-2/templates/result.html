@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Deepfake Detection Result</title>
+</head>
+<body style="text-align: center; font-family: Arial, sans-serif;">
+    <h1>Deepfake Detection Result</h1>
+    <p>{{ result }}</p>
+    {% if spectrogram_filename %}
+        <h2>Spectrogram of Uploaded Audio:</h2>
+        <img src="{{ url_for('static', filename='spectrograms/' + spectrogram_filename) }}"
+             alt="Spectrogram Image" style="max-width: 600px;">
+    {% endif %}
+    <br><br>
+    <a href="/">Analyze Another File</a>
+</body>
+</html>
